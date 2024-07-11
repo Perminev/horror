@@ -14,12 +14,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 7f;
     bool isGrounded = true;
     float stamina = 5f;
+    [SerializeField] Animator anim;
     
     // Start is called before the first frame update
     void Start()
     {        
         rb = GetComponent<Rigidbody>();
         currentSpeed = movementSpeed;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,6 +31,14 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         direction = new Vector3(moveHorizontal, 0.0f, moveVertical);
         direction = transform.TransformDirection(direction);
+        if(direction.x != 0 || direction.z != 0)
+        {
+            anim.SetBool("Run", true);
+        }
+        if(direction.x == 0 & direction.z == 0)
+        {
+            anim.SetBool("Run", false);
+        }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
