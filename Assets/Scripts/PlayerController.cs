@@ -33,11 +33,11 @@ public class PlayerController : MonoBehaviour
         direction = transform.TransformDirection(direction);
         if(direction.x != 0 || direction.z != 0)
         {
-            anim.SetBool("Walk", true);
+            anim.SetBool("Run", true);
         }
         if(direction.x == 0 & direction.z == 0)
         {
-            anim.SetBool("Walk", false);
+            anim.SetBool("Run", false);
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
