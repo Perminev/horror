@@ -548,7 +548,6 @@ MonoBehaviour:
   movementSpeed: 5
   shiftSpeed: 10
   jumpForce: 7
-  anim: {fileID: 0}
 --- !u!95 &1200180509
 Animator:
   serializedVersion: 5
@@ -560,7 +559,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cea7b4908e889df4ea1487e9f97c3c67, type: 3}
   m_Controller: {fileID: 9100000, guid: 6245007fb9eb9d04c92cdb091fb72a87, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
