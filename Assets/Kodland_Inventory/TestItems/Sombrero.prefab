@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7067269243461538719}
   - component: {fileID: 6551380347902535953}
   - component: {fileID: 4937609105361635126}
+  - component: {fileID: 2739795814787341556}
   m_Layer: 0
   m_Name: Sombrero
   m_TagString: Untagged
@@ -87,3 +88,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2739795814787341556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653666495078757320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbcee9f63ed916f40b97c59cf01dafe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positon: 0
