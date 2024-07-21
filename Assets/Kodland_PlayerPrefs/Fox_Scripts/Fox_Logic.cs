@@ -23,6 +23,15 @@ public class Fox_Logic : MonoBehaviour
             float loadedZ = PlayerPrefs.GetFloat("posZ");
             transform.position = new Vector3(loadedX, loadedY, loadedZ);
         }
+        if (PlayerPrefs.HasKey("Coins"))
+        {
+            GetCoin();
+        }
+    }
+    
+    public void GetCoin()
+    {
+        coinsText.text = PlayerPrefs.GetInt("Coins").ToString();
     }
     
     void Update()
