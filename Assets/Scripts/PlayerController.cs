@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
             isGrounded = false;
+            anim.SetBool("Jumping", true);
         }
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -76,5 +77,6 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         isGrounded = true;
+        anim.SetBool("Jumping", false);
     }
 }
