@@ -10,11 +10,21 @@ public class Fox_Logic : MonoBehaviour
     Rigidbody rb;    
     Vector3 dir;
     bool isGrounded;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        
+        if (PlayerPrefs.HasKey("posX"))
+        {
+            float loadedX = PlayerPrefs.GetFloat("posX");
+            float loadedY = PlayerPrefs.GetFloat("posY");
+            float loadedZ = PlayerPrefs.GetFloat("posZ");
+            transform.position = new Vector3(loadedX, loadedY, loadedZ);
+        }
     }
+    
     void Update()
     {
         float hor = Input.GetAxis("Horizontal");
@@ -24,10 +34,12 @@ public class Fox_Logic : MonoBehaviour
         FoxAnim(hor, ver);
         Jump();       
     }
+    
     void FixedUpdate()
     {
         rb.MovePosition(transform.position + dir * moveSpeed * Time.deltaTime);
     }
+    
     private void OnCollisionEnter(Collision collision)
     {
         isGrounded = true;
@@ -58,6 +70,7 @@ public class Fox_Logic : MonoBehaviour
             anim.SetFloat("Blend", 0.5f);
         }
     }
+    
     void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
