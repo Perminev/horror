@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour
     bool isGrounded = true;
     float stamina = 5f;
     [SerializeField] Animator anim;
-    
+    private static readonly int Jumping = Animator.StringToHash("Jumping");
+
     // Start is called before the first frame update
     void Start()
     {        
