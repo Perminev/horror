@@ -1286,11 +1286,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!4 &718744678 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 084951eaa96ab9143b58c75938dab38e, type: 3}
-  m_PrefabInstance: {fileID: 741788951}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &718744679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,7 +1498,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 084951eaa96ab9143b58c75938dab38e, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -3052476751237913372, guid: 084951eaa96ab9143b58c75938dab38e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 963194228}
     - targetCorrespondingSourceObject: {fileID: 7790177421927552515, guid: 084951eaa96ab9143b58c75938dab38e, type: 3}
@@ -1886,12 +1881,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2210083, y: 1.71, z: -0.75099945}
+  m_LocalRotation: {x: -0.03950354, y: -0.000033325046, z: -0.000001295586, w: 0.9992194}
+  m_LocalPosition: {x: 0.22105852, y: 0.06106033, z: -0.75684536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 718744678}
+  m_Father: {fileID: 1491796424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -2614,6 +2609,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+--- !u!4 &1491796424 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3052476751237913372, guid: 084951eaa96ab9143b58c75938dab38e, type: 3}
+  m_PrefabInstance: {fileID: 741788951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522201120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100116, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}

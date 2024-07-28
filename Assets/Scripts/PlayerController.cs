@@ -79,6 +79,18 @@ public class PlayerController : MonoBehaviour
             anim.Play("Kick");
         }
 
+        // if (Input.GetKeyDown(KeyCode.LeftControl))
+        // {
+        //     currentSpeed = 3f;
+        //     if (direction.x != 0 || direction.z != 0)
+        //     {
+        //         anim.SetBool("Sneak", true);
+        //     }
+        //     if (direction.x == 0 && direction.z == 0)
+        //     {
+        //         anim.SetBool("Sneak", false);
+        //     }
+        // }
 
     }
     
