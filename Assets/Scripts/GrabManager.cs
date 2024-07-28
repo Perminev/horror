@@ -8,6 +8,7 @@ public class GrabManager : MonoBehaviour
     public GameObject lightPoint;
     public LayerMask mask;
     private Camera camera;
+    [SerializeField] public Animator anim;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class GrabManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    anim.Play("Picking Up");
                     flashlight.transform.parent = lightPoint.transform;
                     flashlight.transform.localPosition = Vector3.zero;
                     flashlight.transform.localEulerAngles = Vector3.zero;

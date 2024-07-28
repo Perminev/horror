@@ -66,6 +66,19 @@ public class PlayerController : MonoBehaviour
             currentSpeed = movementSpeed;
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            anim.Play("Side Kick");
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            anim.Play("High Kick");
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            anim.Play("Kick");
+        }
+
 
     }
     
