@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Threading;
+using TMPro;
 
 public class GrabManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GrabManager : MonoBehaviour
     public LayerMask mask;
     private Camera camera;
     [SerializeField] public Animator anim;
+    [SerializeField] TMP_Text Flashlight_hint;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class GrabManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    Flashlight_hint.text = "";
                     anim.Play("Picking Up");
                     flashlight.transform.parent = lightPoint.transform;
                     flashlight.transform.localPosition = Vector3.zero;
