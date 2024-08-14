@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class ChaseBehaviour : StateMachineBehaviour
 {
+    public bool cameraCanMove = true;
     NavMeshAgent agent;
     Transform player;
     float attackRange = 2;
     float chaseRange = 10;
+    
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -27,7 +31,6 @@ public class ChaseBehaviour : StateMachineBehaviour
         if (distance < attackRange)
             animator.SetBool("isAttacking", true);
 
-        
         if (distance > 10)
             animator.SetBool("isChasing", false);
     }
@@ -38,4 +41,5 @@ public class ChaseBehaviour : StateMachineBehaviour
         agent.SetDestination(agent.transform.position);
         agent.speed = 2;
     }
+    
 }

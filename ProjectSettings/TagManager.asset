@@ -8,6 +8,8 @@ TagManager:
   - FxTemporaire
   - PL
   - Points
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX
