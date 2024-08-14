@@ -6,10 +6,6 @@ TagManager:
   tags:
   - Flashlight
   - FxTemporaire
-  - PL
-  - Points
-  - Door
-  - Key
   layers:
   - Default
   - TransparentFX

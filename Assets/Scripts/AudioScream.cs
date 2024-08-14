@@ -13,7 +13,7 @@ public class AudioScream : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!activeAudio && other.GetComponent<FirstPersonController>())
+        if (!activeAudio && other.GetComponent<PlayerController>())
         {
             audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
             audioSource.Play();

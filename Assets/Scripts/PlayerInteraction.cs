@@ -10,17 +10,17 @@ public class PlayerInteraction : MonoBehaviour
 
     public GameObject interactionUI;
     public TextMeshProUGUI interactionText;
-    // public bool isKey;
+    public bool isKey;
 
 
-    // void Update()
-    // {
-    //     InteractionRay();
-    //     if (Input.GetKeyDown(KeyCode.A))
-    //     {
-    //         isKey = true;
-    //     }
-    // }
+    void Update()
+    {
+        InteractionRay();
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            isKey = true;
+        }
+    }
 
     void InteractionRay()
     {
@@ -38,7 +38,7 @@ public class PlayerInteraction : MonoBehaviour
                 hitSomething = true;
                 interactionText.text = interactable.GetDescription();
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && isKey)
                 {
                     interactable.Interact();
                 }
