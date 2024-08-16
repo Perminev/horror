@@ -23,6 +23,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene ("Scenes/SampleScene");
     }
     
+    public void HowToPlay(string sceneName)
+    {
+        SceneManager.LoadScene ("HowToPlay");
+    }
+    
     public void Exit()
     {
         Application.Quit ();

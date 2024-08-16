@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     bool isGrounded = true;
     float stamina = 5f;
     [SerializeField] public Animator anim;
+    public bool block;
 
     // Start is called before the first frame update
     void Start()
@@ -27,57 +28,62 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        
-        direction = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        direction = transform.TransformDirection(direction);
-        
-        if (direction.x != 0 || direction.z != 0)
+        if (!block)
         {
-            anim.SetBool("Walking", true);
-        }
-        if (direction.x == 0 && direction.z == 0)
-        {
-            anim.SetBool("Walking", false);
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
-            isGrounded = false;
-            anim.SetBool("Jumping", true);
-        }
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            if(stamina > 0)
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            
+            direction = new Vector3(moveHorizontal, 0.0f, moveVertical);
+            direction = transform.TransformDirection(direction);
+            
+            if (direction.x != 0 || direction.z != 0)
             {
-                stamina -= Time.deltaTime;
-                currentSpeed = shiftSpeed;
+                anim.SetBool("Walking", true);
             }
-            else
+            if (direction.x == 0 && direction.z == 0)
             {
+                anim.SetBool("Walking", false);
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+                isGrounded = false;
+                anim.SetBool("Jumping", true);
+            }
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                if(stamina > 0)
+                {
+                    stamina -= Time.deltaTime;
+                    currentSpeed = shiftSpeed;
+                }
+                else
+                {
+                    currentSpeed = movementSpeed;
+                }
+            }
+            else if (!Input.GetKey(KeyCode.LeftShift))
+            {            
+                stamina += Time.deltaTime;                      
                 currentSpeed = movementSpeed;
             }
-        }
-        else if (!Input.GetKey(KeyCode.LeftShift))
-        {            
-            stamina += Time.deltaTime;                      
-            currentSpeed = movementSpeed;
+    
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                anim.Play("Side Kick");
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                anim.Play("High Kick");
+            }
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                anim.Play("Kick");
+            }
+            
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            anim.Play("Side Kick");
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            anim.Play("High Kick");
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            anim.Play("Kick");
-        }
 
         // if (Input.GetKeyDown(KeyCode.LeftControl))
         // {

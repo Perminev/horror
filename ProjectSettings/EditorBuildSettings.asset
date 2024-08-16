@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Pegi.unity
+    guid: e78438932cc900a4d848cdfffccb5d1b
+  - enabled: 1
+    path: Assets/Disclaimer.unity
+    guid: 072ba27c1d67bf343af7e03f0fd0056f
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 5cbf530d9bf0eff4aa054e603b1afcf5
   - enabled: 1
+    path: Assets/HowToPlay.unity
+    guid: 567923492838c5c45b7ac5c3feb612fc
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: fae5e70bfdb0f804b95f81fd2aaa1764
   m_configObjects: {}
