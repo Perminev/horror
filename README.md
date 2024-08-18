@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a ><img src="https://img.shields.io/badge/CSHARP-darkviolet?style=for-the-badge&logo=c"></a>
+  <a><img src="https://custom-icon-badges.demolab.com/badge/CSHARP-%23239120.svg?style=for-the-badge&logo=cshrp&amp;logoColor=white"></a>
   <a><img src="https://img.shields.io/badge/UNITY-gray?style=for-the-badge&logo=unity"></a>
   <a><img src="https://img.shields.io/badge/ASP.NET-violet?style=for-the-badge&logo=dotnet"></a>
   <a><img src="https://img.shields.io/static/v1?style=for-the-badge&amp;message=Windows&amp;color=3390b2&amp;logo=Git+for+Windows&amp;logoColor=80B3FF&amp;label="></a>
